@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML-5 Form</title>
+    </head>
+    <body>
+        <form>
+            <label>Enter Your Email:</label>
+            <input type="email"><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
