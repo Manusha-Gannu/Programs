@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task</title>
+        <script>
+            var field = document.getElementById("field").value;
+            var msg = document.getElementById("msg");
+            function increment(){
+                if (field.value <5){
+                    field.value++
+                }
+                else{
+                   msg.innerHTML = "You can not enter more than 5 values"; 
+                }
+            }
+            function decrement(){
+                if(field.value > 1){
+                    field.value--
+                }
+                else{
+                    msg.innerHTML = "The text box should not be empty";
+                }
+            }
+        </script>
+    </head>
+    <body>
+       <button onclick="decrement()">-</button>
+       <input type="text" id="field" value ="1">
+       <button onclick="increment()">+</button>
+       <p id="msg"></p>
+    </body>
+</html>
