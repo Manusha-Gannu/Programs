@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task</title>
+        <script>
+            function addClick(){
+                var x=document.getElementById("txtBox1").value;
+                var y=document.getElementById("txtBox2").value;
+                var z=(+x)+(+y);
+                document.getElementById("res").innerHTML="Addition is:"+z;
+            }
+            function subClick(){
+                var x=document.getElementById("txtBox1").value;
+                var y=document.getElementById("txtBox2").value;
+                var z=x-y;
+                document.getElementById("res").innerHTML="Subtraction is:"+z;
+            }
+            function mulClick(){
+                var x=document.getElementById("txtBox1").value;
+                var y=document.getElementById("txtBox2").value;
+                var z=x*y;
+                document.getElementById("res").innerHTML="Multiplication is:"+z;
+            }
+            function divClick(){
+                var x=document.getElementById("txtBox1").value;
+                var y=document.getElementById("txtBox2").value;
+                var z=x/y;
+                document.getElementById("res").innerHTML="Division is:"+z;
+            }
+            function allClick(){
+                var x=document.getElementById("txtBox1").value;
+                var y=document.getElementById("txtBox2").value;
+
+                var add=(+x)+(+y);
+                var sub=x-y;
+                var mul=x*y;
+                var div=x/y;
+                document.getElementById("res").innerHTML="Addition is:"+add+"<br>"+"Subtraction is:"+sub+"<br>"+"Multiplication is:"+mul+"<br>"+"Division is:"+div;          
+            }           
+        </script>
+    </head>
+    <body>
+        <input type="text" id="txtBox1">
+        <input type="text" id="txtBox2"><br><br>
+        <button type="button" onclick="addClick()">Add</button>
+        <button type="button" onclick="subClick()">Sub</button>
+        <button type="button" onclick="mulClick()">Mul</button>
+        <button type="button" onclick="divClick()">Div</button>
+        <button type="button" onclick="allClick()">All</button>
+        <h1 id="res"></h1>
+        
+    </body>
+</html>
