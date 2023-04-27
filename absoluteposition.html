@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>position--absolute</title>
+        <style>
+            #container{
+                border: 5px solid black;
+                background-color: yellow;
+            }
+            #ads{
+                position: absolute;
+                border: 3px double;
+                width: 200px;
+                height: 300px;
+            }
+            #adsinner{
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                border: 2px solid black;
+            }
+            aside{
+                position: absolute;
+                width: 100px;
+                border: 1px dotted;
+                top: 100px;
+                right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <p>some text goes here...</p>
+            <div id="ads">
+                parent element
+                <div id="adsinner">
+                    child element
+                    <aside>ads here...</aside>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
