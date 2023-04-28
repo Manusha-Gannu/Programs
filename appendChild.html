@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>appendChild()</title>
+        <script>
+          var categories = ["All","Electronics","Fashion","Footwear","Menswear"];
+          
+          function bodyLoad(){
+            var lstCategories = document.getElementById("lstCategories");
+
+            for(var item of categories){
+                var li = document.createElement("li");
+                li.innerHTML=item;
+                lstCategories.appendChild(li);
+            }
+          }
+        </script>
+    </head>
+    <body onload="bodyLoad()">
+    <h2>categories list</h2>
+    <ol id = "lstCategories">
+        
+    </ol>
+    </body>
+</html>
