@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Append & Prepend</title>
+        <script>
+            function bodyLoad(){
+                var underline = document.createElement("u");
+                underline.innerHTML = "Welcome to";
+
+                var mark = document.createElement("mark");
+                mark.innerHTML = "Thank You..!!";
+
+                document.getElementById("txt").prepend(underline);
+
+                document.getElementById("txt").append(mark);
+            }
+        </script>
+    </head>
+    <body onload="bodyLoad()">
+    <h1 id="txt">LTE TechSoft</h1>
+    </body>
+</html>
