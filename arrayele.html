@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays</title>
+        <script>
+            function f1(){
+                var product = ["JBL Speaker",3500.66,true,["hyd","knr"],function(){
+                    document.write("welcome to Javascript Arrays")
+                }];
+                document.write(`
+                Name is:${product["0"]}<br>
+                price is:${product["1"]}<br>
+                stock is:${product["2"]}<br>
+                shipped to:${product["3"]["0"]}<br>
+                `);
+                product["4"]();
+            }
+            f1()
+        </script>
+    </head>
+</html>
