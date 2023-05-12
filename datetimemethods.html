@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Date Type</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            function bodyLoad(){
+                var now = new Date();
+                var date = document.getElementById("date");
+
+                var month = now.getMonth();
+                var day = now.getDay();
+                var dt = now.getDate();
+                var year = now.getFullYear();
+
+                var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+                var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+                date.innerHTML = `${days[day]}${dt},${months[month]}${year}`;
+                setInterval(getTime,1000);
+                getSalute();
+            }
+            function getTime(){
+                var now = new Date();
+                document.getElementById("time").innerHTML=now.toLocaleTimeString();
+            }
+            function getSalute(){
+                var now = new Date();
+                var hrs = now.getHours();
+                var salute = document.getElementById("salute");
+                var icon = document.getElementById("icon");
+
+                if(hrs>=0 && hrs<=11){
+                    salute.innerHTML = "Good-Morning";
+                    icon.className = "bi bi-brightness-alt-high";
+                }else if(hrs>=12 && hrs<=15){
+                    salute.innerHTML = "Good-Afternoon";
+                    icon.className = "bi bi-brightness-high";
+                }else if(hrs>=16 && hrs<=19){
+                    salute.innerHTML = "Good-Evening";
+                    icon.className = "bi bi-brightness-alt-high-fill";
+                }else if(hrs>=20 && hrs<=23){
+                    salute.innerHTML = "Good-Night";
+                    icon.className = "bi bi-brightness-alt-high";
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid" onload="bodyLoad()">
+    <div class="btn-toolbar bg-danger text-white p-3 m-3 justify-content-between">
+        <div class="btn-group">
+            <span class="bi bi-cart4">
+                Amazon Shopping
+            </span>
+        </div>
+        <div class="btn-group">
+            <span id="icon" style="font-weight: bold;font-size: 20px;"></span>
+            <span id="salute"></span>
+        </div>
+        <div class="btn-group">
+            <span id="date"></span> &nbsp;/&nbsp;
+            <span class="bi bi-alarm"></span>
+            <span id="time"></span>
+        </div>
+    </div>
+    </body>
+</html>
