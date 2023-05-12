@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Operators</title>
+        <script>
+            function f1(){
+                var product = {
+                    Name:"LG TV",
+                    Price:55000.00,
+                    Stock:false
+                }
+                delete product.Price;
+                
+                if(product.Price==undefined){
+                    document.write(`
+                       Name is ${product.Name}<br>
+                       Stock is ${(product.Stock==true)?"In Stock":"Out Of Stock"}
+                       `)
+                }
+                else{
+                    document.write(`
+                        Name is ${product.Name}<br>
+                        Price is ${product.Price}<br>
+                        Stock is ${(product.Stock==true)?"In Stock":"Out Of Stock"}
+                        `)
+                }
+            }
+            f1()
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
