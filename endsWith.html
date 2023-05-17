@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>endsWith()</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            function verifySite(){
+                var site = document.getElementById("txtSite").value;
+                var icon = document.getElementById("msg");
+
+                if(site.endsWith("com")){
+                    icon.className = "bi bi-check2-circle input-group-text text-success"; 
+                }
+                else{
+                    icon.className = "bi bi-x-circle input-group-text text-danger";
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid mt-4">
+        <div class="input-group">
+            <label class="input-group-text">Organization Name</label>
+            <input type="text" class="form-control" onkeyup="verifySite()" id="txtSite">
+            <span class="input-group-text" id="msg">
+                
+            </span>
+        </div>
+    </body>
+</html>
