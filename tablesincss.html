@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables in Css</title>
+        <style>
+            table{
+                border: 3px solid red;
+            }
+            thead{
+                color: red;
+                background-color: yellow;
+            }
+            tbody{
+                color: white;
+                background-color: teal;
+            }
+            thead:hover{
+                color: fuchsia;
+                background-color: blue;
+            }
+            tr:hover{
+                color: white;
+                background-color: black;
+            }
+            tr:nth-child(even){
+                color: green;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <table rules="all">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile.No</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Manu</td>
+                    <td>manu@gmail.com</td>
+                    <td>9090909090</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Teju</td>
+                    <td>teju@gmail.com</td>
+                    <td>9898989898</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Nandhu</td>
+                    <td>nandhu@gmail.com</td>
+                    <td>9998887776</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
