@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>carousel with controls</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+    </head>
+    <body class="container">
+        <div class="carousel" data-bs-ride="carousel" id="myCarousel">
+            <!--carousel with slides starts here-->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../assets/slide1.jpg" class="w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/slide2.jpg" class="w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/slide3.webp" class="w-100">
+                </div>
+            </div>
+            <!--carousel with slides Ends here-->
+            <!--carousel with controls start here-->
+            <button type="button" class="carousel-control-prev" data-bs-target="#myCarousel" data-bs-slide="prev">
+               <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button type="button" class="carousel-control-next" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <!--carousel with controls Ends here-->
+        </div>
+    </body>
+</html>
