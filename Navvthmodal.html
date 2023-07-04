@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>nav bar with modal</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+    </head>
+    <body class="container">
+        <ul class="nav nav-tabs">
+            <li class="nav-item "><a href="#home" class="nav-link active text-success" data-bs-toggle="tab">Home</a></li>
+            <li class="nav-item "><a href="#register" class="nav-link text-success" data-bs-toggle="tab">Register</a></li>
+            <li class="nav-item "><a href="#login" class="nav-link text-success" data-bs-toggle="tab">Login</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="home">
+                <h2 class="text-primary ">Welome to LTE TechSoft.....</h2>
+                <p class="text-warning">Click on Register if you are a new to this page....</p>
+                <p class="text-warning">Click on Login if you are already an user....</p>
+            </div>
+            <div class="tab-pane" id="register">
+                <button type="button" class="btn btn-outline-dark m-5" data-bs-toggle="modal" data-bs-target="#myModal">Register</button>
+                <div class="modal" id="myModal" data-bs-backdrop="static">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="text-info" class="modal-title">Registration Form</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>  
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <label>Enter your Name:</label>
+                                <input type="text"><br><br>
+                                <label>Enter your Email:</label>
+                                <input type="email"><br><br>
+                                <label>Enter your Mobile No.:</label>
+                                <input type="text"><br><br>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success">Register</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="login">
+                <button type="button" class="btn btn-outline-primary m-5" data-bs-toggle="modal" data-bs-target="#myModal">
+                    Login
+                </button>
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="text-info" class="modal-title">Log-In Form</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                        </div>    
+                        <div class="modal-body">
+                            <form>
+                                <label>Enter Your Email:</label>
+                                <input type="email"><br><br>
+                                <label>Enter Your Password:</label>
+                                <input type="password"><br><br>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success">Login</button>
+                        </div>                        
+                    </div>
+                </div>
+            </div> 
+        </div>        
+    </body>
+</html>
