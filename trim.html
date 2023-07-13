@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>trim()</title>
+        <script>
+            function submitClick(){
+                var password = document.getElementById("txtPassword").value;
+                var msg = document.getElementById("msg");
+
+                if(password.trim()=="john123"){
+                    msg.innerHTML="Log-In Success";
+                }
+                else{
+                    msg.innerHTML="Log-In Failed";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Enter Your Password:</legend>
+            <input type="text" id="txtPassword"><br><br>
+            <button type="button" onclick="submitClick()">Submit</button>
+        </fieldset>
+        <h1 id="msg"></h1>
+    </body>
+</html>
