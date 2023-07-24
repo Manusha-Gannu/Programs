@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get|Set Content FromTextbox </title>
+        <script>
+            function getcontent(){
+                var name=document.getElementById("txtBox").value;
+                 document.getElementById("res").innerHTML=name;
+            }
+            function setcontent(){
+                document.getElementById("txtBox").value="Javascript";
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="txtBox"><br><br>
+        <button type="button" onclick="getcontent()">Get</button>
+        <button type="button" onclick="setcontent()">Set</button>
+        <h1 id="res"></h1>
+    </body>
+</html>
