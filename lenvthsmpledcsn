@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String in Javascript</title>
+        <script>
+            function submitClick(){
+                var password=document.getElementById("txtPassword").value;
+                var len=password.length;
+                var msg=document.getElementById("msg");
+                //simple decision
+                if(len>8){
+                    msg.innerHTML="Submit Successfully";
+                }
+                else{
+                    msg.innerHTML=`Password you entered ${password} contains ${len} chars, You can enter password with max of 8 chars`;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Enter Password:</legend>
+            <input type="password" id="txtPassword"><br><br>
+            <button type="button" onclick="submitClick()">Submit</button>
+            <p id="msg"></p>
+        </fieldset>
+    </body>
+</html>
