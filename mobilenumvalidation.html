@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>charA()</title>
+        <script>
+            function verifyMobile(){
+                var mobile = document.getElementById("txtNumber").value;
+                var len = mobile.length;
+                var pos = mobile.charAt(0);
+                var msg =document.getElementById("msg");
+
+                if(mobile==""){
+                    msg.innerHTML = "plz Enter Your Mobile Number";
+                }
+                else{
+                    if(len==10){
+                        if(pos==9||pos==8||pos==7||pos==6){
+                            msg.innerHTML=mobile;
+                        }
+                        else{
+                            msg.innerHTML="Plz Enter a Valid Mobile Number";
+                        }
+                    }
+                    else{
+                        msg.innerHTML="Plz Enter a 10 Digit Mobile Number";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Enter Mobile Number:</legend>
+            <input type="tel" id="txtNumber"><br><br>
+            <button type="button" onclick="verifyMobile()">Submit</button>
+        </fieldset>
+        <h1 id="msg"></h1>
+    </body>
+</html>
