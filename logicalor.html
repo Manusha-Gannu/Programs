@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Operators</title>
+        <script>
+            var users={
+                userEmail:"john@gmail.com",
+                userMobile:9988776655,
+                userPassword:"john123"
+            }
+            function loginClick(){
+                var userData=document.getElementById("txtEmail").value;
+                var password = document.getElementById("txtPassword").value;
+                var msg=document.getElementById("msg");
+
+                if((userData==users.userEmail || userData==users.userMobile) && password==users.userPassword){
+                    msg.innerHTML="Log-In Success";
+                }
+                else{
+                    msg.innerHTML="Log-In Failed";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Log-In Form</legend>
+            <dl>
+                <dt>Enter Email or Mobile:</dt>
+                <dd>
+                    <input type="email" id="txtEmail">
+                </dd>
+                <dt>Enter Password:</dt>
+                <dd>
+                    <input type="text" id="txtPassword">
+                </dd>
+            </dl>
+            <button type="button" onclick="loginClick()">Log-In</button>
+        </fieldset>
+        <h1 id="msg"></h1>
+    </body>
+</html>
