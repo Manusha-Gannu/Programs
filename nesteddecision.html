@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>simple decision</title>
+        <script>
+            var userDetails={
+                userName:"john",
+                userPassword:"john123"
+            }
+            function loginClick(){
+                var username=document.getElementById("txtName").value;
+                var userpassword=document.getElementById("txtPassword").value;
+                var res=document.getElementById("res");
+
+               if(username==""){
+                res.innerHTML="plz enter username";
+               }
+               else{
+                if(username==userDetails.userName){
+                    if(userpassword==userDetails.userPassword){
+                        res.innerHTML="Log-In Success";
+                    }
+                    else{
+                        res.innerHTML="Invalid Userpassword";
+                    }
+                }
+                else{
+                    res.innerHTML="Invalid Username";
+                }
+               }
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset>
+            <legend>User Log-in</legend>
+            <dl>
+                <dt>Enter Name:</dt>
+                <dd>
+                    <input type="text" id="txtName">
+                </dd>
+                <dt>Enter Pasword:</dt>
+                <dd>
+                    <input type="text" id="txtPassword">
+                </dd>
+            </dl>
+            <button type="button" onclick="loginClick()">Log-In</button>
+        </fieldset>
+        <h1 id="res"></h1>
+    </body>
+</html>
