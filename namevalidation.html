@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>match()</title>
+        <script>
+            function verifyName(){
+                var name = document.getElementById("txtName").value;
+                var res = document.getElementById("res");
+                var regExp = /^[A-Za-z]+$/;
+
+                if(name==""){
+                    res.innerHTML="plz Enter Your Name";
+                }
+                else{
+                    if(name.match(regExp)){
+                        res.innerHTML=name;
+                    }
+                    else{
+                        res.innerHTML="plz Enter a Valid name";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Enter Name:</legend>
+            <input type="text" id="txtName"><br><br>
+            <button type="button" onclick="verifyName()">Submit</button>
+        </fieldset>
+        <h1 id="res"></h1>
+    </body>
+</html>
