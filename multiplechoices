@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiple Choices</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            var userDetails={
+                userEmail:"john@gmail.com",
+                userMobile:"9876543210",
+                userPassword:"john@12"
+            }
+            function continueClick(){
+                var userNameContainer=document.getElementById("userName");
+                var userPasswordContainer=document.getElementById("userPassword");
+                var txtUser=document.getElementById("txtUser").value;
+                var userError=document.getElementById("userError");
+
+                if(txtUser==userDetails.userEmail){
+                    userNameContainer.style.display="none";
+                    userPasswordContainer.style.display="block";
+                }else if(txtUser==userDetails.userMobile){
+                    userNameContainer.style.display="none";
+                    userPasswordContainer.style.display="block";
+                }   
+                else{
+                    userError.innerHTML="Invalid userEmail or UserMobile";
+                }
+            }
+
+            function loginClick(){
+                var txtPassword=document.getElementById("txtPassword").value;
+                var pwdError=document.getElementById("pwdError");
+
+                if(txtPassword==userDetails.userPassword){
+                    document.write("Log-In Success");
+                }else{
+                    pwdError.innerHTML="Invalid UserPassword";
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <div class="justify-content-center align-items-center d-flex h-50">
+            <fieldset class="w-25">
+                <legend>Amazon Log-In</legend>
+                <div id="userName">
+                    <label>Enter Email or Mobile No:</label>
+                    <div>
+                        <input type="text" id="txtUser" class="form-control">
+                        <div class="text-danger" id="userError"></div>
+                    </div>
+                    <div class="mt-3 d-grid">
+                        <button type="button" class="btn btn-warning" onclick="continueClick()">Continue</button>
+                    </div>
+                </div>
+                <div id="userPassword" style="display:none">
+                    <label>Enter Your Password</label>
+                    <div>
+                        <input type="text" id="txtPassword" class="form-control">
+                        <div class="text-danger" id="pwdError">
+                        </div>
+                    </div>
+                    <div class="mt-3 d-grid">
+                        <button type="button" class="btn btn-warning" onclick="loginClick()">Log-In</button>
+                    </div>
+                </div>
+                
+            </fieldset>
+        </div>
+    </body>
+</html>
