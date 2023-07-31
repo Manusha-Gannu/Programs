@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Onmousedown&Onmouseup</title>
+        <script>
+            function showOffer(){
+                document.getElementById("pic").src="../assets/offerbox.jpg";
+            }
+            function hideOffer(){
+                document.getElementById("pic").src="../assets/giftbox.webp";
+            }
+        </script>
+    </head>
+    <body>
+        <img onmousedown="showOffer()" id="pic" onmouseup="hideOffer()"
+        src="../assets/giftbox.webp" width="300" height="200" style="margin:30px;">
+    </body>
+</html>
