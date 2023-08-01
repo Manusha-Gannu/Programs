@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Onmouseover&Onmouseout</title>
+        <script>
+            function mouseEnter(){
+                document.getElementById("txt").style.color="red";
+            }
+            function mouseLeave(){
+                document.getElementById("txt").style.color="blue";
+            }
+        </script>
+    </head>
+    <body>
+        <h1 onmouseover="mouseEnter()" id="txt" onmouseout="mouseLeave()">LTE TechSoft</h1>
+    </body>
+</html>
