@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>class Reference</title>
+        <script>
+            function addCss(){
+                var name = document.getElementsByClassName("txt");
+                
+                for(var item of name){
+                    item.style.color="blue";
+                }    
+            }
+        </script>
+    </head>
+    <body>
+        <h1 class="txt">LTE TechSoft</h1>
+        <h1 class="txt">LTE TechSoft</h1>
+        <h1 class="txt">LTE TechSoft</h1>
+        <h1 class="txt">LTE TechSoft</h1>
+        <h1 class="txt">LTE TechSoft</h1>
+        <h1 class="txt">LTE TechSoft</h1>
+        <h1 class="txt">LTE TechSoft</h1>
+        <button type="button" onclick="addCss()">Css</button>
+    </body>
+</html>
