@@ -1,0 +1,18 @@
+<router-outlet></router-outlet>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let arr of array">
+      <td>{{arr.Name}}</td>
+      <td>{{arr.Address}}</td>
+      <td>{{arr.Email}}</td>
+    </tr>
+    
+  </tbody>
+</table>
