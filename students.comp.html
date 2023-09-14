@@ -1,0 +1,23 @@
+<br>
+<div>
+  <button (click)="greaterThan80()">Greaterthan 80 </button>
+  <button (click)="between50To100()">Between 50-100</button><br><br>
+</div>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>Student Email</th>
+        <th>Student Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students1">
+        <td>{{ student.name }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.marks }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
